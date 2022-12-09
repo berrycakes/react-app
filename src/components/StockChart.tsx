@@ -27,13 +27,13 @@ type timeData = {
 };
 
 const StockChart = ({ data, change }: { data: timeData[]; change: number }) => {
-  const color: string = change > 0 ? 'lightgreen' : 'lightpink';
+  console.log(change);
   const dataObject = {
     labels: data.map(daily => daily.priceDate),
     datasets: [
       {
         data: data.map(daily => daily.close),
-        borderColor: color,
+        borderColor: change > 0 ? 'mediumaquamarine' : 'lightpink',
       },
     ],
   };

@@ -53,7 +53,7 @@ const Home = () => {
         </div>
         <div className="lg:col-span-8 flex items-center justify-center overflow-auto">
           {historical && !historical.isLoading ? (
-            <StockChart data={historical} change={quote.change} />
+            <StockChart data={historical} change={quote[0].change} />
           ) : null}
         </div>
       </div>
